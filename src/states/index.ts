@@ -1,16 +1,22 @@
 import { atom } from "recoil";
+import { IItems } from "../types";
 
-export const isSearched = atom({
-  key: "isSearched",
+export const isSearchedAtom = atom({
+  key: "isSearchedAtom",
   default: false,
 });
 
-export const defaultData = atom({
-  key: "defaultData",
-  default: null,
+export const keywordAtom = atom({
+  key: "keywordAtom",
+  default: "",
 });
 
-export const searchedData = atom({
-  key: "searchedData",
-  default: null,
+export const defaultDataAtom = atom({
+  key: "defaultDataAtom",
+  default: {} as IItems,
+});
+
+export const searchedDataAtom = atom({
+  key: "searchedDataAtom",
+  default: {} as any,
 });
