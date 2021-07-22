@@ -17,6 +17,7 @@ function Result() {
       `/search?q=${keyword}`,
       client.get
     );
+    console.log(error);
     console.log("data나와랏 ", data?.data?.collection.items);
     setSearchedData(data?.data?.collection.items);
     return {
@@ -28,7 +29,7 @@ function Result() {
 
   const { isLoading, isError } = getData(keyword);
   if (isLoading) return <Pending />;
-  else if (isError !== undefined) return <ErrorMessage />;
+  else if (isError !== undefined) return <ErrorMessage isError={isError} />;
   else return <CardView />;
 }
 

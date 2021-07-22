@@ -4,11 +4,13 @@ import SearchBar from "./component/SearchBar";
 import { isSearchedAtom } from "../src/states";
 import { useRecoilValue } from "recoil";
 import DefaultCard from "./component/DefaultCard";
+import Header from "./component/common/Header";
+
 function App() {
   const isSearched = useRecoilValue(isSearchedAtom);
   return (
     <div className="App">
-      메인입니다.
+      <Header />
       <SearchBar />
       {isSearched ? <Result /> : <DefaultCard />}
     </div>

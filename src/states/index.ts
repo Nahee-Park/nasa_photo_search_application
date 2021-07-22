@@ -13,7 +13,7 @@ export const keywordAtom = atom({
 
 export const defaultDataAtom = atom({
   key: "defaultDataAtom",
-  default: {} as IItems,
+  default: {} as any,
 });
 
 export const searchedDataAtom = atom({
