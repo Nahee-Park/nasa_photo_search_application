@@ -1,5 +1,4 @@
 import { atom } from "recoil";
-import { IItems } from "../types";
 
 export const isSearchedAtom = atom({
   key: "isSearchedAtom",
@@ -8,15 +7,10 @@ export const isSearchedAtom = atom({
 
 export const keywordAtom = atom({
   key: "keywordAtom",
-  default: "",
+  default: "galaxy",
 });
 
-export const defaultDataAtom = atom({
-  key: "defaultDataAtom",
-  default: {} as any,
-});
-
-export const searchedDataAtom = atom({
-  key: "searchedDataAtom",
-  default: {} as any,
+export const pageIndexAtom = atom({
+  key: "pageIndexAtom",
+  default: 0,
 });
