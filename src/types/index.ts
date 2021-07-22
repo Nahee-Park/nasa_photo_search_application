@@ -15,7 +15,7 @@ export interface linkData {
 // data 안의 collection 안에 있는 애들 타입 지정
 export interface IItems {
   collection: {
-    items: [{ href: string; data: IData[]; links: linkData[] }];
+    items: ArrayItems[];
   };
 }
 

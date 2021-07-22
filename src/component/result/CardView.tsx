@@ -21,10 +21,11 @@ const Page = ({ index, keyword }: PageProps) => {
   );
   const isLoading = !error && !data;
   const isError = error;
+  console.log(data?.data?.collection.items);
   if (isLoading) return <Pending />;
   else if (isError !== undefined) return <ErrorMessage isError={isError} />;
-  else if (data?.data?.collection.items.length === 1)
-    return <div>데이터가 없습니다.</div>;
+  else if (data?.data?.collection.items.length === 0)
+    return <Styled.Empty>데이터가 없습니다.</Styled.Empty>;
   else
     return (
       <Styled.Card>
@@ -75,5 +76,12 @@ const Styled = {
     flex-wrap: wrap;
     height: 50%;
     width: 100%;
+  `,
+  Empty: styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   `,
 };
