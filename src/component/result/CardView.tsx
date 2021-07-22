@@ -19,7 +19,6 @@ const Page = ({ index, keyword }: PageProps) => {
     `/search?q=${keyword}&page=${index}`,
     client.get
   );
-  console.log(data?.data?.collection.items.length);
   const isLoading = !error && !data;
   const isError = error;
   if (isLoading) return <Pending />;

@@ -16,8 +16,6 @@ function Result() {
       `/search?q=${keyword}`,
       client.get
     );
-    console.log(error);
-    console.log("data나와랏 ", data?.data?.collection.items);
     return {
       data: data,
       isLoading: !error && !data,

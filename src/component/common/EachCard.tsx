@@ -8,7 +8,6 @@ interface EachCardProps {
 }
 
 function EachCard({ itemData }: EachCardProps) {
-  console.log(itemData);
   const imageUrl = itemData.links && itemData.links[0].href;
   const title = itemData && itemData.data[0].title;
   const description = itemData && itemData.data[0].description;
