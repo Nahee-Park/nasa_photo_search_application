@@ -19,10 +19,13 @@ const Page = ({ index, keyword }: PageProps) => {
     `/search?q=${keyword}&page=${index}`,
     client.get
   );
+  console.log(data?.data?.collection.items.length);
   const isLoading = !error && !data;
   const isError = error;
   if (isLoading) return <Pending />;
   else if (isError !== undefined) return <ErrorMessage isError={isError} />;
+  else if (data?.data?.collection.items.length === 1)
+    return <div>데이터가 없습니다.</div>;
   else
     return (
       <Styled.Card>

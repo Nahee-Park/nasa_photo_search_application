@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
 import styled from "styled-components";
 import { ArrayItems } from "../../types";
@@ -8,7 +8,8 @@ interface EachCardProps {
 }
 
 function EachCard({ itemData }: EachCardProps) {
-  const imageUrl = itemData && itemData.links[0].href;
+  console.log(itemData);
+  const imageUrl = itemData.links && itemData.links[0].href;
   const title = itemData && itemData.data[0].title;
   const description = itemData && itemData.data[0].description;
   const date_created = itemData && itemData.data[0].date_created;

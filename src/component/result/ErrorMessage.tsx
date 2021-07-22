@@ -5,7 +5,6 @@ interface ErrorMessageProps {
   isError: Error;
 }
 function ErrorMessage({ isError }: ErrorMessageProps) {
-  console.log(isError.message);
   return (
     <Styled.Root>
       <Styled.Message>
