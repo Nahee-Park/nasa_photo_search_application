@@ -1,6 +1,6 @@
 export interface IData {
   center: string;
-  data_created: string;
+  date_created: string;
   description: string;
   ketwords: string[];
   location: string;
@@ -17,4 +17,10 @@ export interface IItems {
   collection: {
     items: [{ href: string; data: IData[]; links: linkData[] }];
   };
+}
+
+export interface ArrayItems {
+  href: string;
+  data: IData[];
+  links: linkData[];
 }
